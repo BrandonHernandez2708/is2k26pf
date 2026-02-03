@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -45,7 +46,16 @@ namespace Capa_Vista_Seguridad
             );
 
             this.FormClosing += Frm_Seguridad_FormClosing;
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.StartPosition = FormStartPosition.Manual;
+
+            Rectangle area = Screen.PrimaryScreen.WorkingArea;
+            this.Location = area.Location;
+            this.Size = area.Size;
         }
+
+
         private void Frm_Seguridad_Load(object sender, EventArgs e)
         {
             // Mostrar usuario conectado en StatusStrip
@@ -340,10 +350,6 @@ namespace Capa_Vista_Seguridad
             this.Close();
         }
 
-        private void pruebaNavegadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_PruebaNavegador nav = new Frm_PruebaNavegador();
-            nav.ShowDialog();
-        }
+
     }
 }
