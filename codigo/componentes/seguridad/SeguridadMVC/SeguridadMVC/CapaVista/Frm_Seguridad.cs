@@ -233,7 +233,7 @@ namespace Capa_Vista_Seguridad
         private void modulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CerrarFormulariosHijos();
-            Frm_Modulo modulo = new Frm_Modulo();
+            Frm_ModuloV2 modulo = new Frm_ModuloV2();
             modulo.MdiParent = this;
             modulo.Show();
         }
