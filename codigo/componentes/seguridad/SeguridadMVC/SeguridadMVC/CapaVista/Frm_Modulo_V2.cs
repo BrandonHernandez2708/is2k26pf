@@ -48,7 +48,7 @@ namespace Capa_Vista_Seguridad
                 };
 
 
-            int id_aplicacion = 303;
+            int id_aplicacion = 304;
 
             int id_Modulo = 4;
             navegador1.IPkId_Aplicacion = id_aplicacion;
